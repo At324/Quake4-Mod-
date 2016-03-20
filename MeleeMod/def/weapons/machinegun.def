@@ -43,6 +43,7 @@ export machinegun
 	anim	idle.ma					-dest machinegun_idle
 	anim	idle.ma					-dest machinegun_reload
 	anim	idle.ma					-dest machinegun_fire1
+
 }
 
 entityDef viewStyle_shouldered_machinegun {
@@ -84,7 +85,7 @@ entityDef weapon_machinegun
 	"joint_view_flashlight"		"flashlight"
 	"joint_view_guiLight"		"gun_jt"
 	"joint_view_eject"			"eject"
-	"joint_world_flash"			"muzzle_flash"
+	//"joint_world_flash"			"muzzle_flash"	 Tye: commented this out 
 
 	"inv_weapon"				"weapon_machinegun"
 	"inv_start_ammo_machinegun"		"40"
@@ -110,7 +111,7 @@ entityDef weapon_machinegun
 
 	"muzzle_kick_time"			"0.2"
 	"muzzle_kick_maxtime"		"0.6"
-	"muzzle_kick_angles"		"0 0 0"
+	"muzzle_kick_angles"		"-5 0 0"		//Tye: Changed this from 0 0 0
 	"muzzle_kick_offset"		"0.5 .15 .15"
 
 	"ejectOffset"				"0.5 -1 -1"
@@ -131,7 +132,7 @@ entityDef weapon_machinegun
 	//"mtr_flashShader"			"lights/muzzleflash"  Tye: Commented this out
 	//"flashColor"				"1 0.8 0.4"			Tye: Commented this out
 	// "flashRadius"				"0"		//Tye:Changed this from 200 and commented out
-	// "flashPointLight"			"1"		//Tye: Commentted this out
+	// "flashPointLight"			"1"		Tye: Commentted this out
 	// "flashTime"					".1"		//Tye: Commented this out
 	// "flashViewOffset"			"15 -5 -5"   //Tye: Commented this out
 
