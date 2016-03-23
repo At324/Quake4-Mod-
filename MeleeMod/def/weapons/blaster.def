@@ -81,7 +81,7 @@ entityDef weapon_blaster
 	"chargeTime"				".8"
 	"chargeDelay"				".1"
 	"chargeGlow"				"0 .4"
-	"fireRate"					"5"			//Tye:Canged this from .15 
+	"fireRate"					".15"			
 	"spread"					".2"
 
 //	"def_projectile"			"projectile_blaster"
@@ -91,7 +91,7 @@ entityDef weapon_blaster
 	"clipSize"					"0"
 	"ammoRequired"				"0"
 //	"launchFromBarrel"			"1"
-
+	
 	"inv_weapon"				"weapon_blaster"
 	"inv_item"					"5"
 	"inv_icon"					"gfx/guis/hud/icons/item_blaster.tga"
@@ -229,7 +229,7 @@ model weapon_blaster_world
 
 entityDef hitscan_blaster
 {
-	"range"						"10000"
+	"range"						"60"		//Tye: Changed this from 10000
 
 	"fx_impact"					"effects/weapons/blaster/impact_default.fx"
 	"fx_impact_water"			"effects/ambient/splash_smll.fx"
@@ -313,7 +313,7 @@ entityDef projectile_blaster_charged
 entityDef damage_blaster
 {
 	"inherit"					"damage_bullet"
-	"damage"					"200"			//Tye: Changed this from 8
+	"damage"					"15"			//Tye: Changed this from 8
 
 	"fx_wound"					"effects/wounds/energy.fx"
 

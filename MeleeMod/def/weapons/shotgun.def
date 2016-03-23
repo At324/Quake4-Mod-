@@ -336,7 +336,7 @@ entityDef hitscan_shotgun_pellet
 entityDef damage_pellet
 {
 	"inherit"					"damage_bullet"
-	"damage"					"14"
+	"damage"					"40"		//Changed from 14
 
 	"splat_size"				"128"
 	
