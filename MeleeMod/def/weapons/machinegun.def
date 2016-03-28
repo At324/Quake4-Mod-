@@ -381,8 +381,8 @@ entityDef hitscan_zoomed_bullet
 entityDef damage_machinegun
 {
 	"inherit"					"damage_bullet"
-	"damage"					"20"		//tye: Changed this from 15
-	"damage_flesh"				"15"		//Tye: Changed this from 18
+	"damage"					"18"		//tye: Changed this from 15
+	"damage_flesh"				"22"		//Tye: Changed this from 18
 
 	"deathPush"					"100"
 	"deathPushMin"				"3000 350"

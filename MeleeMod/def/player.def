@@ -169,7 +169,7 @@ export player
 	anim	pistol_lower.ma				-dest pistol_lower
 	anim	pistol_raise.ma				-dest pistol_raise
 			
- 	anim	machinegun_idle.ma			-dest machinegun_idle
+ 	anim	machinegun_idle.Ama			-dest machinegun_idle
  	anim	machinegun_idle_up.ma		-dest machinegun_idle_up
  	anim	machinegun_idle_down.ma		-dest machinegun_idle_down
  	anim	machinegun_aim.ma			-dest machinegun_aim
@@ -294,6 +294,15 @@ export player
 	anim	gauntlet_aim_down.ma		-dest gauntlet_aim_down
 	anim	gauntlet_lower.ma			-dest gauntlet_lower
 	anim	gauntlet_raise.ma			-dest gauntlet_raise
+
+	anim	gauntlet2_fire_up.ma			-dest gauntlet_fire_up
+	anim	gauntlet2_fire.ma			-dest gauntlet_fire
+	anim	gauntlet2_fire_down.ma		-dest gauntlet_fire_down
+	anim	gauntlet2_aim.ma				-dest gauntlet_aim
+	anim	gauntlet2_aim_up.ma			-dest gauntlet_aim_up
+	anim	gauntlet2_aim_down.ma		-dest gauntlet_aim_down
+	anim	gauntlet2_lower.ma			-dest gauntlet_lower
+	anim	gauntlet2_raise.ma			-dest gauntlet_raise
 
 	anim	MP_Cheer.ma					-dest cheer
 	anim	MP_Salute.ma				-dest salute
@@ -436,7 +445,8 @@ model model_player_marine
 	}
 	anim machinegun_idle			models/characters/player/machinegun_aim_down.md5anim, models/characters/player/machinegun_aim.md5anim, models/characters/player/machinegun_aim_up.md5anim
 	anim machinegun_aim				models/characters/player/machinegun_aim_down.md5anim, models/characters/player/machinegun_aim.md5anim, models/characters/player/machinegun_aim_up.md5anim
-	anim machinegun_fire1			models/characters/player/machinegun_fire_down.md5anim, models/characters/player/machinegun_fire.md5anim, models/characters/player/machinegun_fire_up.md5anim
+	anim machinegun_fire1			models/characters/player/gauntlet_fire_down.md5anim, models/characters/player/gauntlet_fire.md5anim, models/characters/player/gauntlet_fire_up.md5anim
+	//Tye: copied over the gauntlet fire anim instead of this one for machinegun fire: models/characters/player/machinegun_fire_down.md5anim, models/characters/player/machinegun_fire.md5anim, models/characters/player/machinegun_fire_up.md5anim
 	anim machinegun_reload			models/characters/player/shotgun_reload.md5anim
 	anim machinegun_lower			models/characters/player/machinegun_lower.md5anim
 		{
@@ -473,6 +483,7 @@ model model_player_marine
 		{
 	rate 1.3
 	}
+	
 	anim railgun_idle				models/characters/player/railgun_aim_down.md5anim, models/characters/player/railgun_aim.md5anim, models/characters/player/railgun_aim_up.md5anim
 	anim railgun_aim				models/characters/player/railgun_aim_down.md5anim, models/characters/player/railgun_aim.md5anim, models/characters/player/railgun_aim_up.md5anim
 	anim railgun_fire1				models/characters/player/railgun_fire_down.md5anim, models/characters/player/railgun_fire.md5anim, models/characters/player/railgun_fire_up.md5anim
@@ -557,6 +568,16 @@ model model_player_marine
 	rate 1.3
 	}
 	anim gauntlet_raise			models/characters/player/machinegun_raise.md5anim
+		
+		//Tye: Copied and added the animations from the gauntlet to make a second one
+	anim gauntlet2_fire			models/characters/player/gauntlet_fire_down.md5anim, models/characters/player/gauntlet_fire.md5anim, models/characters/player/gauntlet_fire_up.md5anim
+	anim gauntlet2_aim			models/characters/player/gauntlet_aim_down.md5anim, models/characters/player/gauntlet_aim.md5anim, models/characters/player/gauntlet_aim_up.md5anim
+	anim gauntlet2_idle			models/characters/player/gauntlet_aim_down.md5anim, models/characters/player/gauntlet_aim.md5anim, models/characters/player/gauntlet_aim_up.md5anim
+	anim gauntlet2_lower			models/characters/player/machinegun_lower.md5anim
+		{
+	rate 1.3
+	}
+	anim gauntlet2_raise			models/characters/player/machinegun_raise.md5anim
 		{
 	rate 1.3
 	}
@@ -671,11 +692,11 @@ entityDef player_marine
 	"weapon7_best"						"0"
 	"weapon7_cycle"						"1"
 
-	"def_weapon8"						"weapon_lightninggun"
+	"def_weapon8"						"weapon_lightninggun"		
 	"weapon8_best"						"1"
 	"weapon8_cycle"						"1"
 
-	"def_weapon9"						"weapon_gauntlet"			//Tye: added the gauntlet and FUCK YES IT WORKS
+	"def_weapon9"						"weapon_gauntlet"		//Tye: added the gauntlet and FUCK YES IT WORKS
 	"weapon9_best"						"1"
 	"weapon9_cycle"						"1"
 
@@ -721,10 +742,10 @@ entityDef player_marine
 	"respawn_delay"						"1.7"		// minimum delay for respawning after death
 
 	// stats
-	"health"						"1000"
-	"maxhealth"						"1000"
-	"armor"							"0"
-	"maxarmor"						"200"
+	"health"						"999"		//Tye:Changed from 100 
+	"maxhealth"						"999"		
+	"armor"							"400"		//Tye:Changed from 0
+	"maxarmor"						"999"
 	"minRestoreHealth0"					"20"		// Minimum health when loading a game for skill level 0
 	"minRestoreHealth1"					"10"		// Minimum health when loading a game for skill level 1
 
@@ -748,7 +769,7 @@ entityDef player_marine
 	"max_ammo_hyperblaster"					"400"
 	"max_ammo_napalmgun"					"40"
 	"max_ammo_rocketlauncher"				"40"
-	"max_ammo_grenadelauncher"				"0"				//Tye: changed this from 50 to 0 
+	"max_ammo_grenadelauncher"				"50"				
 	"max_ammo_lightninggun"					"400"
 	"max_ammo_dmg"						"25"
 	"max_ammo_none"						"-1"
@@ -868,7 +889,7 @@ model model_player_slimy_transfer
 model model_player_corpse
 {
 	inherit							model_player_marine
-	mesh							models/characters/player/player_corpse.md5mesh
+	mesh							models/characters/player/player_cdwaorpse.md5mesh
 }
 
 model model_player_underwear_marine

@@ -75,7 +75,7 @@ entityDef weapon_rocketlauncher
 	"inv_icon"					"gfx/guis/hud/icons/item_rocket.tga"
 	"inv_name"					"#str_107409"	
 
-	"fireRate"					".8"
+	"fireRate"					".05"		//Tye:Changed from .8
 	"reloadRate"				".8"
 	"spread"					"0"
 
@@ -84,8 +84,8 @@ entityDef weapon_rocketlauncher
 	
 	"weaponname"				"Rocket Launcher"
 	"def_projectile"			"projectile_rocket"
-	"ammoType"					"ammo_rocketlauncher"
-	"clipSize"					"1"
+	"ammoType"					"ammo_none"		//Tye:Changed this from ammo_rocketlauncher 
+	"clipSize"					"0"			//Tye:Changed this from 1 
 	"ammoRequired"				"1"
 	"gui"						"guis/weapons/rocketlauncher_ammo.gui"
 	"mtr_icon"					"gfx/guis/hud/icons/gun_rocketlauncher"
@@ -96,7 +96,7 @@ entityDef weapon_rocketlauncher
 	"muzzle_kick_offset"		"3 0 3"
 
 	"recoilTime"				"500"
-	"recoilAngles"				"-.20 0 0"
+	"recoilAngles"				"0 0 0"		//Tye: Changed from -.20 0 0
 	
 	"mtr_flashShader"			"lights/muzzleflash"
 	"flashColor"				"0.99 0.84 .31"
@@ -330,9 +330,9 @@ entityDef projectile_rocket
 	"def_damage"				"damage_rocketDirect"
 	"def_splash_damage"			"damage_rocketSplash"
 																											
-	"speed"						"900"
-	"fuse"						"6"
-	"push"						"48000"
+	"speed"						"100"		//Tye: Changed to 200
+	"fuse"						"2"			//Tye:Changed from 6
+	"push"						"4800"		//Tye:Changed from 48000
 	
 							
 	"detonate_on_fuse"			"1"
@@ -392,7 +392,7 @@ entityDef projectile_rocket_homing
 entityDef damage_rocketDirect 
 {
 	"damage"					"150"
-	"push"						"45000"
+	"push"						"4500"		//Tye:Changed from 45000
 	"gib"						"1"
 
 	"deathPush"					"200"
@@ -414,9 +414,9 @@ entityDef damage_rocketDirect_mp
 entityDef damage_rocketSplash 
 {
 	"damage"					"150"
-	"radius"					"180"
-	"knockback"					"100"
-	"push"						"10000"
+	"radius"					"100"		//Tye:Changed from 180 
+	"knockback"					"100" 
+	"push"						"6000"		//Tye:Changed from 10000
 	"gib"						"0"
 
 	"deathPush"					"100"

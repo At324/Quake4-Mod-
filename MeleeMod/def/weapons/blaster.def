@@ -313,7 +313,7 @@ entityDef projectile_blaster_charged
 entityDef damage_blaster
 {
 	"inherit"					"damage_bullet"
-	"damage"					"15"			//Tye: Changed this from 8
+	"damage"					"12"			//Tye: Changed this from 8
 
 	"fx_wound"					"effects/wounds/energy.fx"
 

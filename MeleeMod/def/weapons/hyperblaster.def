@@ -272,7 +272,7 @@ entityDef weaponmod_hyperblaster_bounce2
 entityDef damage_hyperblaster
 {
 	"inherit"					"damage_blaster"
-	"damage"					"25"		//Tye:Changed from 14
+	"damage"					"20"		//Tye:Changed from 14
 
 	"deathPush"					"100"
 	"deathPushMin"				"3000 350"

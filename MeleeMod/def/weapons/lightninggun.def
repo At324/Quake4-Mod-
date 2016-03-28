@@ -292,7 +292,7 @@ entityDef hitscan_lightninggun_mp
 
 entityDef damage_lightninggun
 {
-	"damage"					"11"
+	"damage"					"13"		//Tye:Changed from 11
 //	"knockback"					"10"
 	"gib"						"1"
 
